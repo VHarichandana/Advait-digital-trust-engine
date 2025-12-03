@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+PyJWT
+SQLAlchemy
+alembic
+databases
+python-multipart
+aiofiles
+pillow
