@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 4%;
+    --foreground: 210 40% 98%;
+    --card: 220 18% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 18% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 190 95% 55%;
+    --primary-foreground: 220 20% 4%;
+    --secondary: 270 80% 60%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 270 80% 60%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 190 95% 55%;
+    --radius: 0.75rem;
+    --cyber-cyan: 190 95% 55%;
+    --neon-purple: 270 80% 60%;
+    --cyber-green: 142 76% 45%;
+    --warning-amber: 38 92% 50%;
+    --danger-red: 0 72% 51%;
+    --sidebar-background: 220 18% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 190 95% 55%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 270 80% 60%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 190 95% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-cyber bg-clip-text text-transparent;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out both;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
