@@ -4,9 +4,13 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
+  base: "/Advait-digital-trust-engine/",
   server: {
     host: "::",
     port: 8080,
+  },
+  build: {
+    outDir: "dist",
   },
   plugins: [
     react(),
