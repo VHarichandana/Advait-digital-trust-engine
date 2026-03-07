@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/Advait-digital-trust-engine/",
+  base: process.env.BASE_URL || "/Advait-digital-trust-engine/",
   server: {
     host: "::",
     port: 8080,
